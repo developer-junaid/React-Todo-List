@@ -4,8 +4,8 @@ import Todo from "../Todo/Todo";
 
 const TodoList = () => {
   return (
-    <div className="todo-container">
-      <ul className="todo-list">
+    <div className={classes.todoContainer}>
+      <ul className={classes.todoList}>
         <Todo />
         <Todo />
       </ul>

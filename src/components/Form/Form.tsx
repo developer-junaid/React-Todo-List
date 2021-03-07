@@ -6,7 +6,7 @@ import FormInput from "../FormInput/FormInput";
 
 const Form = () => {
   return (
-    <form>
+    <form className={classes.form}>
       <FormInput />
       <FormButton />
       <FormFilter />
