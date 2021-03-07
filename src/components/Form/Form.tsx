@@ -4,7 +4,19 @@ import FormFilter from "../FormFilter/FormFilter";
 import FormButton from "../FormButton/FormButton";
 import FormInput from "../FormInput/FormInput";
 
-const Form = () => {
+interface todosType {
+  todos: {
+    title: string;
+  }[];
+
+  setTodos: Array<{
+    key: string;
+    value: string;
+  }>;
+  ([{ key, value }]);
+}
+
+const Form: React.FC<[todosType]> = ({ todos, setTodos }) => {
   return (
     <form className={classes.form}>
       <FormInput />

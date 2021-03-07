@@ -2,12 +2,28 @@ import React from "react";
 import classes from "./todoList.module.css";
 import Todo from "../Todo/Todo";
 
-const TodoList = () => {
+interface TodosType {
+  todos: {
+    title: string;
+  }[];
+
+  setTodos: Array<{
+    key: string;
+    value: string;
+  }>;
+  ([{ key, value }]);
+}
+
+const TodoList: React.FC<[TodosType]> = ({ todos, setTodos }) => {
+  console.log(todos);
+
   return (
     <div className={classes.todoContainer}>
       <ul className={classes.todoList}>
-        <Todo />
-        <Todo />
+        {todos &&
+          todos.map((todo, index) => (
+            <Todo key={index} title={todo["title"]} />
+          ))}
       </ul>
     </div>
   );
