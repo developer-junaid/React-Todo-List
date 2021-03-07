@@ -1,21 +1,15 @@
 import React from "react";
 import classes from "./form.module.css";
+import FormFilter from "../FormFilter/FormFilter";
+import FormButton from "../FormButton/FormButton";
+import FormInput from "../FormInput/FormInput";
 
 const Form = () => {
   return (
     <form>
-      <input type="text" className="todo-input" />
-      <button className="todo-btn" type="submit">
-        <i className="fas fa-plus-square"></i>
-      </button>
-
-      <div className="select">
-        <select name="todos" className="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="incomplete">Incomplete</option>
-        </select>
-      </div>
+      <FormInput />
+      <FormButton />
+      <FormFilter />
     </form>
   );
 };
