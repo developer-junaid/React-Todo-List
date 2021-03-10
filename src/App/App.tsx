@@ -3,18 +3,13 @@ import Title from "../components/Title/Title";
 import Form from "../components/Form/Form";
 import TodoList from "../components/TodoList/TodoList";
 import classes from "./app.module.css";
-
-interface TodosType {
-  title: string;
-  completed: boolean;
-}
+import { TodosType } from "../types/types";
+import Footer from "../components/Footer/Footer";
 
 function App() {
   // Todos
   let [todos, setTodos] = useState<TodosType[]>([
-    { title: "first todo", completed: true },
-    { title: "second todo", completed: false },
-    { title: "third todo", completed: true },
+    { title: "Let's add todos", completed: false },
   ]);
 
   // Selected Filter
@@ -62,13 +57,14 @@ function App() {
 
   return (
     <div className={classes.container}>
-      <Title value="Junaid's Todo List" />
+      <Title value="Todo List" />
       <Form todos={todos} addTodo={addTodo} applyFilter={applyFilter} />
       <TodoList
         todos={todosToShow}
         changeClass={changeClass}
         removeTodo={removeTodo}
       />
+      <Footer />
     </div>
   );
 }

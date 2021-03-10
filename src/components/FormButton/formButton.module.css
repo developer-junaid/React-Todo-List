@@ -5,6 +5,7 @@
   background: white;
   color: #d88771;
   cursor: pointer;
+  outline: none;
   transition: all 0.3s ease;
 }
 

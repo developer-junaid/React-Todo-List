@@ -1,13 +1,6 @@
 import React from "react";
 import classes from "./formFilter.module.css";
-
-interface FilterType {
-  setTodos: Array<{
-    key: string;
-    value: string;
-  }>;
-  ([{ key, value }]);
-}
+import { FilterType } from "../../types/types";
 
 const FormFilter: React.FC<[FilterType]> = ({ applyFilter }) => {
   return (

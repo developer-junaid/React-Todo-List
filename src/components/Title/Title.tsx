@@ -1,9 +1,6 @@
 import React from "react";
 import classes from "./title.module.css";
-
-interface TitleType {
-  value: string;
-}
+import { TitleType } from "../../types/types";
 
 const Title = ({ value }: TitleType) => {
   return (

@@ -3,20 +3,19 @@ import classes from "./form.module.css";
 import FormFilter from "../FormFilter/FormFilter";
 import FormButton from "../FormButton/FormButton";
 import FormInput from "../FormInput/FormInput";
+import { TodosFormType } from "../../types/types";
 
-interface todosType {
-  todos: {
-    title: string;
-  }[];
-}
-
-const Form: React.FC<[todosType]> = ({ todos, addTodo, applyFilter }) => {
+const Form: React.FC<[TodosFormType]> = ({ todos, addTodo, applyFilter }) => {
   let [input, setInput] = useState({ title: "" });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addTodo({ ...input, completed: false }); // Add Todo
-    setInput({ title: "" }); // Clear input
+    if (!(input["title"] === "")) {
+      addTodo({ ...input, completed: false }); // Add Todo
+      setInput({ title: "" }); // Clear input
+    } else {
+      alert("Please write some text");
+    }
   };
 
   return (

@@ -1,12 +1,9 @@
 import React from "react";
 import classes from "./todo.module.css";
 import { FaTrash, FaCheck } from "react-icons/fa";
+import { TodoItemType } from "../../types/types";
 
-interface TodoType {
-  title: string;
-}
-
-const Todo: React.FC<TodoType> = ({ todo, changeClass, removeTodo }) => {
+const Todo: React.FC<TodoItemType> = ({ todo, changeClass, removeTodo }) => {
   return (
     <div className={todo["completed"] ? classes.todoCompleted : classes.todo}>
       <li className={classes.todoItem}>{todo["title"]}</li>

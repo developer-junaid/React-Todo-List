@@ -35,10 +35,19 @@
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.trashBtn:hover {
+  background: #d1441d;
 }
 
 .completeBtn {
   background: green;
+}
+
+.completeBtn:hover {
+  background: rgb(4, 84, 4);
 }
 
 .todoItem {
