@@ -6,11 +6,16 @@ interface TodoType {
   title: string;
 }
 
-const Todo: React.FC<TodoType> = ({ todo, removeTodo }) => {
+const Todo: React.FC<TodoType> = ({ todo, changeClass, removeTodo }) => {
   return (
-    <div className={classes.todo}>
+    <div className={todo["completed"] ? classes.todoCompleted : classes.todo}>
       <li className={classes.todoItem}>{todo["title"]}</li>
-      <button className={classes.completeBtn}>
+      <button
+        className={classes.completeBtn}
+        onClick={() => {
+          changeClass(todo, !todo["completed"]);
+        }}
+      >
         <span className={classes.faCheck}>
           <FaCheck />
         </span>

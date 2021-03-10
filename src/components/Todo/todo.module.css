@@ -9,7 +9,21 @@
   transition: all 0.5s ease;
 }
 
-.todo li {
+.todoCompleted {
+  display: flex;
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo li,
+.todoCompleted li {
   flex: 1;
 }
 

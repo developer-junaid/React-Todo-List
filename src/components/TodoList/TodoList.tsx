@@ -8,13 +8,22 @@ interface TodosType {
   }[];
 }
 
-const TodoList: React.FC<[TodosType]> = ({ todos, removeTodo }) => {
+const TodoList: React.FC<[TodosType]> = ({
+  todos,
+  changeClass,
+  removeTodo,
+}) => {
   return (
     <div className={classes.todoContainer}>
       <ul className={classes.todoList}>
         {todos &&
           todos.map((todo, index) => (
-            <Todo key={index} removeTodo={removeTodo} todo={todo} />
+            <Todo
+              key={index}
+              changeClass={changeClass}
+              removeTodo={removeTodo}
+              todo={todo}
+            />
           ))}
       </ul>
     </div>
