@@ -10,11 +10,24 @@ interface TodosType {
 }
 
 function App() {
+  // Todos
   let [todos, setTodos] = useState<TodosType[]>([
     { title: "first todo", completed: true },
     { title: "second todo", completed: false },
     { title: "third todo", completed: true },
   ]);
+
+  // Selected Filter
+  let [selectedFilter, setSelectedFilter] = useState("all");
+  let todosToShow = [];
+
+  if (selectedFilter === "completed") {
+    todosToShow = todos.filter((item) => item["completed"] === true);
+  } else if (selectedFilter === "incomplete") {
+    todosToShow = todos.filter((item) => item["completed"] === false);
+  } else {
+    todosToShow = todos;
+  }
 
   // Add Todo
   const addTodo = (todo) => {
@@ -42,12 +55,17 @@ function App() {
     setTodos(newTodos);
   };
 
+  // Apply Filter
+  const applyFilter = (value) => {
+    setSelectedFilter(value);
+  };
+
   return (
     <div className={classes.container}>
       <Title value="Junaid's Todo List" />
-      <Form todos={todos} addTodo={addTodo} />
+      <Form todos={todos} addTodo={addTodo} applyFilter={applyFilter} />
       <TodoList
-        todos={todos}
+        todos={todosToShow}
         changeClass={changeClass}
         removeTodo={removeTodo}
       />

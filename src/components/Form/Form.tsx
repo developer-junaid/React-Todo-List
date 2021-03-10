@@ -8,20 +8,14 @@ interface todosType {
   todos: {
     title: string;
   }[];
-
-  setTodos: Array<{
-    key: string;
-    value: string;
-  }>;
-  ([{ key, value }]);
 }
 
-const Form: React.FC<[todosType]> = ({ todos, addTodo }) => {
+const Form: React.FC<[todosType]> = ({ todos, addTodo, applyFilter }) => {
   let [input, setInput] = useState({ title: "" });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addTodo(input); // Add Todo
+    addTodo({ ...input, completed: false }); // Add Todo
     setInput({ title: "" }); // Clear input
   };
 
@@ -29,7 +23,7 @@ const Form: React.FC<[todosType]> = ({ todos, addTodo }) => {
     <form className={classes.form} onSubmit={(e) => handleSubmit(e)}>
       <FormInput input={input["title"]} setInput={setInput} />
       <FormButton />
-      <FormFilter />
+      <FormFilter applyFilter={applyFilter} />
     </form>
   );
 };
