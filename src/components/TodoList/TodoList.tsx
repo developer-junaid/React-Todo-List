@@ -6,21 +6,15 @@ interface TodosType {
   todos: {
     title: string;
   }[];
-
-  setTodos: Array<{
-    key: string;
-    value: string;
-  }>;
-  ([{ key, value }]);
 }
 
-const TodoList: React.FC<[TodosType]> = ({ todos, setTodos }) => {
+const TodoList: React.FC<[TodosType]> = ({ todos, removeTodo }) => {
   return (
     <div className={classes.todoContainer}>
       <ul className={classes.todoList}>
         {todos &&
           todos.map((todo, index) => (
-            <Todo key={index} title={todo["title"]} />
+            <Todo key={index} removeTodo={removeTodo} todo={todo} />
           ))}
       </ul>
     </div>
