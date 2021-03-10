@@ -15,8 +15,6 @@ interface TodosType {
 }
 
 const TodoList: React.FC<[TodosType]> = ({ todos, setTodos }) => {
-  console.log(todos);
-
   return (
     <div className={classes.todoContainer}>
       <ul className={classes.todoList}>

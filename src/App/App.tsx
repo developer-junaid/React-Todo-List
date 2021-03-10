@@ -18,14 +18,14 @@ function App() {
 
   // Add Todo
   const addTodo = (todo) => {
-    setTodos(...todos, todo);
-    console.log("added todo !");
+    setTodos([...todos, todo]);
+    console.log("added todo !", todos);
   };
 
   return (
     <div className={classes.container}>
       <Title value="Junaid's Todo List" />
-      <Form todos={todos} setTodos={setTodos} />
+      <Form todos={todos} addTodo={addTodo} />
       <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );

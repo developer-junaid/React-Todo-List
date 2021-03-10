@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./form.module.css";
 import FormFilter from "../FormFilter/FormFilter";
 import FormButton from "../FormButton/FormButton";
@@ -16,10 +16,18 @@ interface todosType {
   ([{ key, value }]);
 }
 
-const Form: React.FC<[todosType]> = ({ todos, setTodos }) => {
+const Form: React.FC<[todosType]> = ({ todos, addTodo }) => {
+  let [input, setInput] = useState({ title: "" });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addTodo(input); // Add Todo
+    setInput({ title: "" }); // Clear input
+  };
+
   return (
-    <form className={classes.form}>
-      <FormInput />
+    <form className={classes.form} onSubmit={(e) => handleSubmit(e)}>
+      <FormInput input={input["title"]} setInput={setInput} />
       <FormButton />
       <FormFilter />
     </form>
