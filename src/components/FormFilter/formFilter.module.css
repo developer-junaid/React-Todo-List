@@ -31,6 +31,6 @@
 }
 
 .select:hover::after {
-  background: white;
+  background: whitesmoke;
   color: #ff6f47;
 }

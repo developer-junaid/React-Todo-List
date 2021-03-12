@@ -1,7 +1,7 @@
 .todo {
   display: flex;
   margin: 0.5rem;
-  background: white;
+  background: whitesmoke;
   color: black;
   font-size: 1.5rem;
   justify-content: space-between;
@@ -12,7 +12,7 @@
 .todoCompleted {
   display: flex;
   margin: 0.5rem;
-  background: white;
+  background: whitesmoke;
   color: black;
   font-size: 1.5rem;
   justify-content: space-between;
@@ -30,7 +30,7 @@
 .trashBtn,
 .completeBtn {
   background: #ff6f47;
-  color: white;
+  color: whitesmoke;
   border: none;
   padding: 1rem;
   cursor: pointer;
