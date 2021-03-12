@@ -3,9 +3,9 @@ import classes from "./form.module.css";
 import FormFilter from "../FormFilter/FormFilter";
 import FormButton from "../FormButton/FormButton";
 import FormInput from "../FormInput/FormInput";
-import { TodosFormType } from "../../types/types";
+import { FormPropsType } from "../../types/types";
 
-const Form: React.FC<[TodosFormType]> = ({ todos, addTodo, applyFilter }) => {
+const Form: React.FC<FormPropsType> = ({ addTodo, applyFilter }) => {
   let [input, setInput] = useState({ title: "" });
 
   const handleSubmit = (event) => {

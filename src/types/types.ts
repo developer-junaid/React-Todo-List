@@ -1,32 +1,24 @@
-export interface TodosType {
+export interface TodoType {
   title: string;
   completed: boolean;
 }
 
-export interface TitleType {
+export interface FormPropsType {
+  addTodo: (arg) => void;
+  applyFilter: (arg) => void;
+}
+
+export interface FilterPropsType {
+  applyFilter: (arg) => void;
+}
+
+export interface FormInputPropsType {
+  input: string;
+  setInput: (arg) => void;
+}
+
+export interface TitlePropsType {
   value: string;
 }
 
-export interface TodosFormType {
-  todos: {
-    title: string;
-  }[];
-}
-
-export interface FilterType {
-  setTodos: Array<{
-    key: string;
-    value: string;
-  }>;
-  ([{ key, value }]);
-}
-
-export interface TodoListType {
-  todos: {
-    title: string;
-  }[];
-}
-
-export interface TodoItemType {
-  title: string;
-}
+//

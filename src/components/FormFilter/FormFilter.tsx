@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./formFilter.module.css";
-import { FilterType } from "../../types/types";
+import { FilterPropsType } from "../../types/types";
 
-const FormFilter: React.FC<[FilterType]> = ({ applyFilter }) => {
+const FormFilter: React.FC<FilterPropsType> = ({ applyFilter }) => {
   return (
     <div className={classes.select}>
       <select

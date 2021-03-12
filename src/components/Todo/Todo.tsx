@@ -1,9 +1,15 @@
 import React from "react";
 import classes from "./todo.module.css";
 import { FaTrash, FaCheck } from "react-icons/fa";
-import { TodoItemType } from "../../types/types";
+import { TodoType } from "../../types/types";
 
-const Todo: React.FC<TodoItemType> = ({ todo, changeClass, removeTodo }) => {
+interface TodoPropsType {
+  todo: TodoType;
+  changeClass: (arg, arg2) => void;
+  removeTodo: (arg) => void;
+}
+
+const Todo: React.FC<TodoPropsType> = ({ todo, changeClass, removeTodo }) => {
   return (
     <div className={todo["completed"] ? classes.todoCompleted : classes.todo}>
       <li className={classes.todoItem}>{todo["title"]}</li>
@@ -17,7 +23,12 @@ const Todo: React.FC<TodoItemType> = ({ todo, changeClass, removeTodo }) => {
           <FaCheck />
         </span>
       </button>
-      <button className={classes.trashBtn} onClick={() => removeTodo(todo)}>
+      <button
+        className={classes.trashBtn}
+        onClick={() => {
+          removeTodo(todo);
+        }}
+      >
         <span className={classes.faTrash}>
           <FaTrash />
         </span>

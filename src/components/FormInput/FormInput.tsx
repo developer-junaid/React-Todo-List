@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./formInput.module.css";
+import { FormInputPropsType } from "../../types/types";
 
-const FormInput = ({ setInput, input }) => {
+const FormInput: React.FC<FormInputPropsType> = ({ setInput, input }) => {
   return (
     <input
       type="text"

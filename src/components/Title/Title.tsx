@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./title.module.css";
-import { TitleType } from "../../types/types";
+import { TitlePropsType } from "../../types/types";
 
-const Title = ({ value }: TitleType) => {
+const Title: React.FC<TitlePropsType> = ({ value }) => {
   return (
     <header className={classes.header}>
       <h1>{value}</h1>

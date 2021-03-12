@@ -1,9 +1,15 @@
 import React from "react";
 import classes from "./todoList.module.css";
 import Todo from "../Todo/Todo";
-import { TodoListType } from "../../types/types";
+import { TodoType } from "../../types/types";
 
-const TodoList: React.FC<[TodoListType]> = ({
+interface TodoListPropsType {
+  todos: TodoType[];
+  changeClass: (arg, arg2) => void;
+  removeTodo: (arg) => void;
+}
+
+const TodoList: React.FC<TodoListPropsType> = ({
   todos,
   changeClass,
   removeTodo,
