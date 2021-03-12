@@ -5,3 +5,10 @@
   flex-wrap: wrap;
   flex-direction: column;
 }
+
+.header {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

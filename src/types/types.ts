@@ -19,6 +19,8 @@ export interface FormInputPropsType {
 
 export interface TitlePropsType {
   value: string;
+  className?: string;
+  style?: {};
 }
 
 //
