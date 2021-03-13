@@ -8,5 +8,10 @@
 @media screen and (max-width: 950px) {
   .form {
     flex-direction: column;
+    text-align: center;
   }
+}
+
+/* Small */
+@media screen and (max-width: 650px) {
 }

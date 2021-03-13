@@ -4,7 +4,7 @@
   height: 200px;
   justify-content: flex-end;
   flex: 1;
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 .footer {
@@ -45,4 +45,31 @@
 .icons a:hover {
   opacity: 1;
   color: whitesmoke;
+}
+/* Medium */
+@media screen and (max-width: 950px) {
+  .footer {
+    flex-direction: column;
+    height: 12vh;
+    justify-content: center;
+  }
+
+  .footer > h3 {
+    font-size: 1.2rem;
+  }
+
+  .icons a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small */
+@media screen and (max-width: 650px) {
+  .footer > h3 {
+    font-size: 1rem;
+  }
+
+  .icons a {
+    font-size: 1.2rem;
+  }
 }

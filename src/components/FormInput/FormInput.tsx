@@ -5,7 +5,7 @@ import FormButton from "../FormButton/FormButton";
 
 const FormInput: React.FC<FormInputPropsType> = ({ setInput, input }) => {
   return (
-    <div>
+    <div className={classes.inputContainer}>
       <input
         type="text"
         className={classes.todoInput}

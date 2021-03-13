@@ -3,10 +3,23 @@
   font-size: 2rem;
   border: none;
   background: whitesmoke;
+  border-radius: 2px 0 0 2px;
 }
 
 @media screen and (max-width: 950px) {
+  .inputContainer {
+    width: 100%;
+  }
   .todoInput {
     font-size: 1.7rem;
+    width: 80%;
+  }
+}
+
+/* Small */
+@media screen and (max-width: 650px) {
+  .todoInput {
+    width: 80%;
+    font-size: 1.2rem;
   }
 }

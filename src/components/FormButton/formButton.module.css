@@ -7,6 +7,7 @@
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
+  border-radius: 0px 2px 2px 0px;
 }
 
 .todoBtn:hover {
@@ -17,5 +18,12 @@
 @media screen and (max-width: 950px) {
   .todoBtn {
     font-size: 1.7rem;
+  }
+}
+
+/* Small */
+@media screen and (max-width: 650px) {
+  .todoBtn {
+    font-size: 1.2rem;
   }
 }

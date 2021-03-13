@@ -1,23 +1,28 @@
 .todo {
   display: flex;
+  min-width: 700px;
   margin: 0.5rem;
   background: #f5f5f5;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   justify-content: space-between;
   align-items: center;
+  border-radius: 2px;
   transition: all 0.5s ease;
 }
 
 .todoCompleted {
   display: flex;
+  min-width: 700px;
   margin: 0.5rem;
   background: whitesmoke;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   justify-content: space-between;
   align-items: center;
   transition: all 0.5s ease;
+  border-radius: 2px;
+
   text-decoration: line-through;
   opacity: 0.5;
 }
@@ -37,6 +42,10 @@
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s ease;
+}
+
+.trashBtn {
+  border-radius: 0px 2px 2px 0px;
 }
 
 .trashBtn:hover {
@@ -70,6 +79,8 @@
   .todo,
   .todoCompleted {
     font-size: 1.3rem;
+    min-width: 30%;
+    width: 85vw;
   }
 
   .trashBtn,
@@ -79,5 +90,14 @@
 }
 
 /* Small */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
+  .todo,
+  .todoCompleted {
+    font-size: 0.9rem;
+  }
+
+  .trashBtn,
+  .completeBtn {
+    font-size: 0.5rem;
+  }
 }
