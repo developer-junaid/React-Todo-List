@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import classes from "./form.module.css";
 import FormFilter from "../FormFilter/FormFilter";
-import FormButton from "../FormButton/FormButton";
 import FormInput from "../FormInput/FormInput";
 import { FormPropsType } from "../../types/types";
 
@@ -21,7 +20,6 @@ const Form: React.FC<FormPropsType> = ({ addTodo, applyFilter }) => {
   return (
     <form className={classes.form} onSubmit={(e) => handleSubmit(e)}>
       <FormInput input={input["title"]} setInput={setInput} />
-      <FormButton />
       <FormFilter applyFilter={applyFilter} />
     </form>
   );

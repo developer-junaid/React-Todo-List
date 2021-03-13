@@ -4,3 +4,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 950px) {
+  .form {
+    flex-direction: column;
+  }
+}

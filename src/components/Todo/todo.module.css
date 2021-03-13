@@ -1,7 +1,7 @@
 .todo {
   display: flex;
   margin: 0.5rem;
-  background: whitesmoke;
+  background: #f5f5f5;
   color: black;
   font-size: 1.5rem;
   justify-content: space-between;
@@ -29,7 +29,8 @@
 
 .trashBtn,
 .completeBtn {
-  background: #ff6f47;
+  outline: none;
+  background: rgba(0, 0, 0, 0.859);
   color: whitesmoke;
   border: none;
   padding: 1rem;
@@ -39,7 +40,7 @@
 }
 
 .trashBtn:hover {
-  background: #d1441d;
+  background: rgba(0, 0, 0, 0.941);
 }
 
 .completeBtn {
@@ -64,7 +65,19 @@
   opacity: 0.5;
 }
 
-.fall {
-  transform: translateY(8rem) rotateZ(20deg);
-  opacity: 0;
+/* Medium */
+@media screen and (max-width: 950px) {
+  .todo,
+  .todoCompleted {
+    font-size: 1.3rem;
+  }
+
+  .trashBtn,
+  .completeBtn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small */
+@media screen and (max-width: 600px) {
 }

@@ -4,3 +4,9 @@
   border: none;
   background: whitesmoke;
 }
+
+@media screen and (max-width: 950px) {
+  .todoInput {
+    font-size: 1.7rem;
+  }
+}

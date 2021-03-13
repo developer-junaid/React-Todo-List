@@ -58,10 +58,7 @@ function App() {
   return (
     <div className={classes.container}>
       <header className={classes.header}>
-        <Title
-          value="Todo List"
-          style={{ color: "white", fontSize: "3.6rem", fontWeight: "600" }}
-        />
+        <Title value="Todo List" />
       </header>
       <Form addTodo={addTodo} applyFilter={applyFilter} />
       <TodoList

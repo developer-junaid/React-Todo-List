@@ -3,13 +3,19 @@
   font-size: 2rem;
   border: none;
   background: whitesmoke;
-  color: #d88771;
+  color: rgba(0, 0, 0, 0.859);
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
 }
 
 .todoBtn:hover {
-  background: #d88771;
+  background: rgba(0, 0, 0, 0.619);
   color: white;
+}
+
+@media screen and (max-width: 950px) {
+  .todoBtn {
+    font-size: 1.7rem;
+  }
 }

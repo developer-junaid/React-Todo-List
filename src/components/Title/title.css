@@ -1,0 +1,11 @@
+.title {
+  color: whitesmoke;
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 950px) {
+  .title {
+    font-size: 2.8rem;
+  }
+}

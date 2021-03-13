@@ -1,9 +1,10 @@
 import React from "react";
 import { TitlePropsType } from "../../types/types";
+import "./title.css";
 
-const Title: React.FC<TitlePropsType> = ({ value, className, style }) => {
+const Title: React.FC<TitlePropsType> = ({ value, style }) => {
   return (
-    <p style={style} className={className}>
+    <p style={style} className="title">
       {value}
     </p>
   );

@@ -14,7 +14,9 @@
 
 .filterTodo {
   color: #ff6f47;
+  font-size: 1rem;
   width: 10rem;
+  font-weight: 600;
   cursor: pointer;
   padding: 1rem;
 }
@@ -22,7 +24,8 @@
 .select::after {
   content: "\25BC";
   position: absolute;
-  background: #ff6f47;
+  background: rgba(0, 0, 0, 0.859);
+  color: whitesmoke;
   top: 0;
   right: 0;
   padding: 1rem;
@@ -32,5 +35,11 @@
 
 .select:hover::after {
   background: whitesmoke;
-  color: #ff6f47;
+  color: rgba(0, 0, 0, 0.859);
+}
+
+@media screen and (max-width: 950px) {
+  .filterTodo {
+    font-size: 0.9rem;
+  }
 }
