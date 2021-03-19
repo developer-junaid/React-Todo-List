@@ -10,6 +10,7 @@ const FormInput: React.FC<FormInputPropsType> = ({ setInput, input }) => {
         type="text"
         className={classes.todoInput}
         value={input}
+        maxLength={18}
         onChange={(e) => setInput({ title: e.target.value })}
       />
       <FormButton />
